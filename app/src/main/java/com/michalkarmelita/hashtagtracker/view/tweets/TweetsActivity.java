@@ -15,9 +15,18 @@ import com.michalkarmelita.hashtagtracker.dagger.NetworkModule;
 import com.michalkarmelita.hashtagtracker.dagger.tweets.DaggerTweetsActivityComponent;
 import com.michalkarmelita.hashtagtracker.dagger.tweets.TweetsActivityComponent;
 import com.michalkarmelita.hashtagtracker.dagger.tweets.TweetsActivityModule;
+import com.michalkarmelita.hashtagtracker.model.TwitterApiService;
+import com.michalkarmelita.hashtagtracker.model.api.TwitterData;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Response;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
+import rx.functions.Func1;
+import rx.schedulers.Schedulers;
 
 public class TweetsActivity extends AppCompatActivity {
 
@@ -28,6 +37,9 @@ public class TweetsActivity extends AppCompatActivity {
     @BindView(R.id.fab)
     FloatingActionButton fab;
 
+    @Inject
+    TwitterApiService apiService;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +47,23 @@ public class TweetsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         createComponent();
         ButterKnife.bind(this);
+
+        apiService.searchForHashtag("#haiku")
+                .map(new Func1<Response<TwitterData>, TwitterData>() {
+                    @Override
+                    public TwitterData call(Response<TwitterData> twitterDataResponse) {
+                        return twitterDataResponse.body();
+                    }
+                })
+        .subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(new Action1<TwitterData>() {
+            @Override
+            public void call(TwitterData twitterData) {
+                System.out.println("twitterData = " + twitterData.getStatuses().get(0).getText());
+            }
+        });
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         assert fab != null;
