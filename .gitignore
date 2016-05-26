@@ -1,0 +1,27 @@
+#Android generated
+bin
+gen
+lint.xml
+.apt_generated/
+#IntelliJ IDEA
+.idea
+*.iml
+*.ipr
+*.iws
+#Ant
+build.xml
+ant.properties
+local.properties
+proguard.cfg
+#Gradle
+.gradle
+/build
+#Other
+.DS_Store
+*.swp
+*.tmp
+*.bak
+*.launch
+# Crashlytics
+com_crashlytics_export_strings.xml
+crashlytics-build.properties*.iml
