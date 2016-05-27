@@ -1,5 +1,5 @@
 
-package com.michalkarmelita.hashtagtracker.model.api;
+package com.michalkarmelita.hashtagtracker.model.apimodels;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,9 +8,9 @@ import java.util.Map;
 import javax.annotation.Generated;
 
 @Generated("org.jsonschema2pojo")
-public class Description {
+public class Url {
 
-    private List<Object> urls = new ArrayList<Object>();
+    private List<Url_> urls = new ArrayList<Url_>();
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
@@ -18,7 +18,7 @@ public class Description {
      * @return
      *     The urls
      */
-    public List<Object> getUrls() {
+    public List<Url_> getUrls() {
         return urls;
     }
 
@@ -27,7 +27,7 @@ public class Description {
      * @param urls
      *     The urls
      */
-    public void setUrls(List<Object> urls) {
+    public void setUrls(List<Url_> urls) {
         this.urls = urls;
     }
 

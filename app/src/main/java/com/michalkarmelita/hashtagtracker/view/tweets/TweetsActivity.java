@@ -16,7 +16,7 @@ import com.michalkarmelita.hashtagtracker.dagger.tweets.DaggerTweetsActivityComp
 import com.michalkarmelita.hashtagtracker.dagger.tweets.TweetsActivityComponent;
 import com.michalkarmelita.hashtagtracker.dagger.tweets.TweetsActivityModule;
 import com.michalkarmelita.hashtagtracker.model.TwitterApiService;
-import com.michalkarmelita.hashtagtracker.model.api.TwitterData;
+import com.michalkarmelita.hashtagtracker.model.apimodels.TwitterSearchResponse;
 
 import javax.inject.Inject;
 
@@ -28,7 +28,7 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
-public class TweetsActivity extends AppCompatActivity {
+public class TweetsActivity extends AppCompatActivity implements MvpTweetsView {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -47,23 +47,6 @@ public class TweetsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         createComponent();
         ButterKnife.bind(this);
-
-        apiService.searchForHashtag("#haiku")
-                .map(new Func1<Response<TwitterData>, TwitterData>() {
-                    @Override
-                    public TwitterData call(Response<TwitterData> twitterDataResponse) {
-                        return twitterDataResponse.body();
-                    }
-                })
-        .subscribeOn(Schedulers.io())
-        .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(new Action1<TwitterData>() {
-            @Override
-            public void call(TwitterData twitterData) {
-                System.out.println("twitterData = " + twitterData.getStatuses().get(0).getText());
-            }
-        });
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         assert fab != null;

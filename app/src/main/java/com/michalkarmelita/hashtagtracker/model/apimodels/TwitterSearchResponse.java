@@ -1,5 +1,5 @@
 
-package com.michalkarmelita.hashtagtracker.model.api;
+package com.michalkarmelita.hashtagtracker.model.apimodels;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,7 +8,7 @@ import java.util.Map;
 import javax.annotation.Generated;
 
 @Generated("org.jsonschema2pojo")
-public class TwitterData {
+public class TwitterSearchResponse {
 
     private List<Status> statuses = new ArrayList<Status>();
     private SearchMetadata searchMetadata;

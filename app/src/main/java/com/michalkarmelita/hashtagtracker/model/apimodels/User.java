@@ -1,5 +1,5 @@
 
-package com.michalkarmelita.hashtagtracker.model.api;
+package com.michalkarmelita.hashtagtracker.model.apimodels;
 
 import java.util.HashMap;
 import java.util.Map;
