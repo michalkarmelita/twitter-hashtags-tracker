@@ -15,8 +15,8 @@ import se.akerfeldt.okhttp.signpost.SigningInterceptor;
 @Module
 public class NetworkModule {
 
-    private static final String KEY = "QOtShTSdDEALXyo2CwNJuhdn7";
-    private static final String SECRET = "Sxj6ZILUzIkNHzaJd4v3Dl9WY35Q9deRHOKihnFYLvZAagS8MZ";
+    private static final String KEY = "uPe2IJSQ5oYhtN8kC7ClIsPY3";
+    private static final String SECRET = "WA7i2JXJgJOxHisJAmqQKu8PxiMc8IU3qgETVlO96y3Km1Kiaa";
     private static final String TOKEN = "2879752575-Bmd2c5yIUD9zwYR4tHCMnYc4fyFt4im4kPm6X31";
     private static final String TOKEN_SECRET = "UWvhz8VwBEPS75FVUWHhhUIZvXVlAbaFPlnxvqgLMX1Zz";
 

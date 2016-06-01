@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Hashtag Tracker</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="search_hint">Search for hashtag</string>
+    <string name="all_items_loaded_message">All items loaded</string>
+    <string name="error_message">Something went wrong</string>
+    <string name="intro_message">Input hashtag and press search button on your keyboard</string>
+    <string name="to_many_requests_message">To many requests, please try again in a moment</string>
 </resources>

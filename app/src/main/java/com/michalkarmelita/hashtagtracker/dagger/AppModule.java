@@ -3,6 +3,7 @@ package com.michalkarmelita.hashtagtracker.dagger;
 
 import android.content.Context;
 
+import com.google.gson.Gson;
 import com.michalkarmelita.hashtagtracker.App;
 import com.michalkarmelita.hashtagtracker.dagger.daggerqualifiers.ForApplication;
 import com.michalkarmelita.hashtagtracker.dagger.daggerqualifiers.NetworkScheduler;
@@ -28,7 +29,7 @@ public class AppModule {
     @Provides
     @Singleton
     @ForApplication
-    public Context activityContext() {
+    public Context appContext() {
         return app.getApplicationContext();
     }
 

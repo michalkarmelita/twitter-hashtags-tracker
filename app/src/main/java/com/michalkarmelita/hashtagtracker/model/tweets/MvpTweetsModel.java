@@ -6,9 +6,15 @@ import rx.Observable;
 
 public interface MvpTweetsModel {
 
-    void setQuery(String query);
+    void newQuery(String query);
+
+    void loadMore();
 
     Observable<TwitterSearchResponse> getSearchResultsObservable();
+
+    Observable<Object> getAllObjectsLoadedObservable();
+
+    Observable<Object> tooManyRequestsObservable();
 
     Observable<Object> getErrorObservable();
 

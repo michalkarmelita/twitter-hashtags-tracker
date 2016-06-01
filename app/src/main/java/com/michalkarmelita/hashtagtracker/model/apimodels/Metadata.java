@@ -1,16 +1,19 @@
 
 package com.michalkarmelita.hashtagtracker.model.apimodels;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class Metadata {
 
+    @SerializedName("iso_language_code")
+    @Expose
     private String isoLanguageCode;
+    @SerializedName("result_type")
+    @Expose
     private String resultType;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * 
@@ -46,14 +49,6 @@ public class Metadata {
      */
     public void setResultType(String resultType) {
         this.resultType = resultType;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

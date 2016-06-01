@@ -1,30 +1,47 @@
 
 package com.michalkarmelita.hashtagtracker.model.apimodels;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class SearchMetadata {
 
-    private long maxId;
-    private long sinceId;
+    @SerializedName("max_id")
+    @Expose
+    private Long maxId;
+    @SerializedName("since_id")
+    @Expose
+    private Long sinceId;
+    @SerializedName("refresh_url")
+    @Expose
     private String refreshUrl;
+    @SerializedName("next_results")
+    @Expose
     private String nextResults;
-    private long count;
-    private double completedIn;
+    @SerializedName("count")
+    @Expose
+    private Long count;
+    @SerializedName("completed_in")
+    @Expose
+    private Float completedIn;
+    @SerializedName("since_id_str")
+    @Expose
     private String sinceIdStr;
+    @SerializedName("query")
+    @Expose
     private String query;
+    @SerializedName("max_id_str")
+    @Expose
     private String maxIdStr;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * 
      * @return
      *     The maxId
      */
-    public long getMaxId() {
+    public Long getMaxId() {
         return maxId;
     }
 
@@ -33,7 +50,7 @@ public class SearchMetadata {
      * @param maxId
      *     The max_id
      */
-    public void setMaxId(long maxId) {
+    public void setMaxId(Long maxId) {
         this.maxId = maxId;
     }
 
@@ -42,7 +59,7 @@ public class SearchMetadata {
      * @return
      *     The sinceId
      */
-    public long getSinceId() {
+    public Long getSinceId() {
         return sinceId;
     }
 
@@ -51,7 +68,7 @@ public class SearchMetadata {
      * @param sinceId
      *     The since_id
      */
-    public void setSinceId(long sinceId) {
+    public void setSinceId(Long sinceId) {
         this.sinceId = sinceId;
     }
 
@@ -96,7 +113,7 @@ public class SearchMetadata {
      * @return
      *     The count
      */
-    public long getCount() {
+    public Long getCount() {
         return count;
     }
 
@@ -105,7 +122,7 @@ public class SearchMetadata {
      * @param count
      *     The count
      */
-    public void setCount(long count) {
+    public void setCount(Long count) {
         this.count = count;
     }
 
@@ -114,7 +131,7 @@ public class SearchMetadata {
      * @return
      *     The completedIn
      */
-    public double getCompletedIn() {
+    public Float getCompletedIn() {
         return completedIn;
     }
 
@@ -123,7 +140,7 @@ public class SearchMetadata {
      * @param completedIn
      *     The completed_in
      */
-    public void setCompletedIn(double completedIn) {
+    public void setCompletedIn(Float completedIn) {
         this.completedIn = completedIn;
     }
 
@@ -179,14 +196,6 @@ public class SearchMetadata {
      */
     public void setMaxIdStr(String maxIdStr) {
         this.maxIdStr = maxIdStr;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

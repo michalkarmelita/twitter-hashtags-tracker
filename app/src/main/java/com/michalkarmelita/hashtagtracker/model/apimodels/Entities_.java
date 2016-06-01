@@ -1,16 +1,19 @@
 
 package com.michalkarmelita.hashtagtracker.model.apimodels;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class Entities_ {
 
+    @SerializedName("url")
+    @Expose
     private Url url;
+    @SerializedName("description")
+    @Expose
     private Description description;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * 
@@ -46,14 +49,6 @@ public class Entities_ {
      */
     public void setDescription(Description description) {
         this.description = description;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

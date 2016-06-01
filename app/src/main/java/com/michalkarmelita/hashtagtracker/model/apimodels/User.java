@@ -1,53 +1,130 @@
 
 package com.michalkarmelita.hashtagtracker.model.apimodels;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class User {
 
+    @SerializedName("profile_sidebar_fill_color")
+    @Expose
     private String profileSidebarFillColor;
+    @SerializedName("profile_sidebar_border_color")
+    @Expose
     private String profileSidebarBorderColor;
-    private boolean profileBackgroundTile;
+    @SerializedName("profile_background_tile")
+    @Expose
+    private Boolean profileBackgroundTile;
+    @SerializedName("name")
+    @Expose
     private String name;
+    @SerializedName("profile_image_url")
+    @Expose
     private String profileImageUrl;
+    @SerializedName("created_at")
+    @Expose
     private String createdAt;
+    @SerializedName("location")
+    @Expose
     private String location;
+    @SerializedName("follow_request_sent")
+    @Expose
     private Object followRequestSent;
+    @SerializedName("profile_link_color")
+    @Expose
     private String profileLinkColor;
-    private boolean isTranslator;
+    @SerializedName("is_translator")
+    @Expose
+    private Boolean isTranslator;
+    @SerializedName("id_str")
+    @Expose
     private String idStr;
+    @SerializedName("entities")
+    @Expose
     private Entities_ entities;
-    private boolean defaultProfile;
-    private boolean contributorsEnabled;
-    private long favouritesCount;
+    @SerializedName("default_profile")
+    @Expose
+    private Boolean defaultProfile;
+    @SerializedName("contributors_enabled")
+    @Expose
+    private Boolean contributorsEnabled;
+    @SerializedName("favourites_count")
+    @Expose
+    private Long favouritesCount;
+    @SerializedName("url")
+    @Expose
     private String url;
+    @SerializedName("profile_image_url_https")
+    @Expose
     private String profileImageUrlHttps;
-    private long utcOffset;
-    private long id;
-    private boolean profileUseBackgroundImage;
-    private long listedCount;
+    @SerializedName("utc_offset")
+    @Expose
+    private Long utcOffset;
+    @SerializedName("id")
+    @Expose
+    private Long id;
+    @SerializedName("profile_use_background_image")
+    @Expose
+    private Boolean profileUseBackgroundImage;
+    @SerializedName("listed_count")
+    @Expose
+    private Long listedCount;
+    @SerializedName("profile_text_color")
+    @Expose
     private String profileTextColor;
+    @SerializedName("lang")
+    @Expose
     private String lang;
-    private long followersCount;
-    private boolean _protected;
+    @SerializedName("followers_count")
+    @Expose
+    private Long followersCount;
+    @SerializedName("protected")
+    @Expose
+    private Boolean _protected;
+    @SerializedName("notifications")
+    @Expose
     private Object notifications;
+    @SerializedName("profile_background_image_url_https")
+    @Expose
     private String profileBackgroundImageUrlHttps;
+    @SerializedName("profile_background_color")
+    @Expose
     private String profileBackgroundColor;
-    private boolean verified;
-    private boolean geoEnabled;
+    @SerializedName("verified")
+    @Expose
+    private Boolean verified;
+    @SerializedName("geo_enabled")
+    @Expose
+    private Boolean geoEnabled;
+    @SerializedName("time_zone")
+    @Expose
     private String timeZone;
+    @SerializedName("description")
+    @Expose
     private String description;
-    private boolean defaultProfileImage;
+    @SerializedName("default_profile_image")
+    @Expose
+    private Boolean defaultProfileImage;
+    @SerializedName("profile_background_image_url")
+    @Expose
     private String profileBackgroundImageUrl;
-    private long statusesCount;
-    private long friendsCount;
+    @SerializedName("statuses_count")
+    @Expose
+    private Long statusesCount;
+    @SerializedName("friends_count")
+    @Expose
+    private Long friendsCount;
+    @SerializedName("following")
+    @Expose
     private Object following;
-    private boolean showAllInlineMedia;
+    @SerializedName("show_all_inline_media")
+    @Expose
+    private Boolean showAllInlineMedia;
+    @SerializedName("screen_name")
+    @Expose
     private String screenName;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * 
@@ -90,7 +167,7 @@ public class User {
      * @return
      *     The profileBackgroundTile
      */
-    public boolean isProfileBackgroundTile() {
+    public Boolean getProfileBackgroundTile() {
         return profileBackgroundTile;
     }
 
@@ -99,7 +176,7 @@ public class User {
      * @param profileBackgroundTile
      *     The profile_background_tile
      */
-    public void setProfileBackgroundTile(boolean profileBackgroundTile) {
+    public void setProfileBackgroundTile(Boolean profileBackgroundTile) {
         this.profileBackgroundTile = profileBackgroundTile;
     }
 
@@ -216,7 +293,7 @@ public class User {
      * @return
      *     The isTranslator
      */
-    public boolean isIsTranslator() {
+    public Boolean getIsTranslator() {
         return isTranslator;
     }
 
@@ -225,7 +302,7 @@ public class User {
      * @param isTranslator
      *     The is_translator
      */
-    public void setIsTranslator(boolean isTranslator) {
+    public void setIsTranslator(Boolean isTranslator) {
         this.isTranslator = isTranslator;
     }
 
@@ -270,7 +347,7 @@ public class User {
      * @return
      *     The defaultProfile
      */
-    public boolean isDefaultProfile() {
+    public Boolean getDefaultProfile() {
         return defaultProfile;
     }
 
@@ -279,7 +356,7 @@ public class User {
      * @param defaultProfile
      *     The default_profile
      */
-    public void setDefaultProfile(boolean defaultProfile) {
+    public void setDefaultProfile(Boolean defaultProfile) {
         this.defaultProfile = defaultProfile;
     }
 
@@ -288,7 +365,7 @@ public class User {
      * @return
      *     The contributorsEnabled
      */
-    public boolean isContributorsEnabled() {
+    public Boolean getContributorsEnabled() {
         return contributorsEnabled;
     }
 
@@ -297,7 +374,7 @@ public class User {
      * @param contributorsEnabled
      *     The contributors_enabled
      */
-    public void setContributorsEnabled(boolean contributorsEnabled) {
+    public void setContributorsEnabled(Boolean contributorsEnabled) {
         this.contributorsEnabled = contributorsEnabled;
     }
 
@@ -306,7 +383,7 @@ public class User {
      * @return
      *     The favouritesCount
      */
-    public long getFavouritesCount() {
+    public Long getFavouritesCount() {
         return favouritesCount;
     }
 
@@ -315,7 +392,7 @@ public class User {
      * @param favouritesCount
      *     The favourites_count
      */
-    public void setFavouritesCount(long favouritesCount) {
+    public void setFavouritesCount(Long favouritesCount) {
         this.favouritesCount = favouritesCount;
     }
 
@@ -360,7 +437,7 @@ public class User {
      * @return
      *     The utcOffset
      */
-    public long getUtcOffset() {
+    public Long getUtcOffset() {
         return utcOffset;
     }
 
@@ -369,7 +446,7 @@ public class User {
      * @param utcOffset
      *     The utc_offset
      */
-    public void setUtcOffset(long utcOffset) {
+    public void setUtcOffset(Long utcOffset) {
         this.utcOffset = utcOffset;
     }
 
@@ -378,7 +455,7 @@ public class User {
      * @return
      *     The id
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -387,7 +464,7 @@ public class User {
      * @param id
      *     The id
      */
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -396,7 +473,7 @@ public class User {
      * @return
      *     The profileUseBackgroundImage
      */
-    public boolean isProfileUseBackgroundImage() {
+    public Boolean getProfileUseBackgroundImage() {
         return profileUseBackgroundImage;
     }
 
@@ -405,7 +482,7 @@ public class User {
      * @param profileUseBackgroundImage
      *     The profile_use_background_image
      */
-    public void setProfileUseBackgroundImage(boolean profileUseBackgroundImage) {
+    public void setProfileUseBackgroundImage(Boolean profileUseBackgroundImage) {
         this.profileUseBackgroundImage = profileUseBackgroundImage;
     }
 
@@ -414,7 +491,7 @@ public class User {
      * @return
      *     The listedCount
      */
-    public long getListedCount() {
+    public Long getListedCount() {
         return listedCount;
     }
 
@@ -423,7 +500,7 @@ public class User {
      * @param listedCount
      *     The listed_count
      */
-    public void setListedCount(long listedCount) {
+    public void setListedCount(Long listedCount) {
         this.listedCount = listedCount;
     }
 
@@ -468,7 +545,7 @@ public class User {
      * @return
      *     The followersCount
      */
-    public long getFollowersCount() {
+    public Long getFollowersCount() {
         return followersCount;
     }
 
@@ -477,7 +554,7 @@ public class User {
      * @param followersCount
      *     The followers_count
      */
-    public void setFollowersCount(long followersCount) {
+    public void setFollowersCount(Long followersCount) {
         this.followersCount = followersCount;
     }
 
@@ -486,7 +563,7 @@ public class User {
      * @return
      *     The _protected
      */
-    public boolean isProtected() {
+    public Boolean getProtected() {
         return _protected;
     }
 
@@ -495,7 +572,7 @@ public class User {
      * @param _protected
      *     The protected
      */
-    public void setProtected(boolean _protected) {
+    public void setProtected(Boolean _protected) {
         this._protected = _protected;
     }
 
@@ -558,7 +635,7 @@ public class User {
      * @return
      *     The verified
      */
-    public boolean isVerified() {
+    public Boolean getVerified() {
         return verified;
     }
 
@@ -567,7 +644,7 @@ public class User {
      * @param verified
      *     The verified
      */
-    public void setVerified(boolean verified) {
+    public void setVerified(Boolean verified) {
         this.verified = verified;
     }
 
@@ -576,7 +653,7 @@ public class User {
      * @return
      *     The geoEnabled
      */
-    public boolean isGeoEnabled() {
+    public Boolean getGeoEnabled() {
         return geoEnabled;
     }
 
@@ -585,7 +662,7 @@ public class User {
      * @param geoEnabled
      *     The geo_enabled
      */
-    public void setGeoEnabled(boolean geoEnabled) {
+    public void setGeoEnabled(Boolean geoEnabled) {
         this.geoEnabled = geoEnabled;
     }
 
@@ -630,7 +707,7 @@ public class User {
      * @return
      *     The defaultProfileImage
      */
-    public boolean isDefaultProfileImage() {
+    public Boolean getDefaultProfileImage() {
         return defaultProfileImage;
     }
 
@@ -639,7 +716,7 @@ public class User {
      * @param defaultProfileImage
      *     The default_profile_image
      */
-    public void setDefaultProfileImage(boolean defaultProfileImage) {
+    public void setDefaultProfileImage(Boolean defaultProfileImage) {
         this.defaultProfileImage = defaultProfileImage;
     }
 
@@ -666,7 +743,7 @@ public class User {
      * @return
      *     The statusesCount
      */
-    public long getStatusesCount() {
+    public Long getStatusesCount() {
         return statusesCount;
     }
 
@@ -675,7 +752,7 @@ public class User {
      * @param statusesCount
      *     The statuses_count
      */
-    public void setStatusesCount(long statusesCount) {
+    public void setStatusesCount(Long statusesCount) {
         this.statusesCount = statusesCount;
     }
 
@@ -684,7 +761,7 @@ public class User {
      * @return
      *     The friendsCount
      */
-    public long getFriendsCount() {
+    public Long getFriendsCount() {
         return friendsCount;
     }
 
@@ -693,7 +770,7 @@ public class User {
      * @param friendsCount
      *     The friends_count
      */
-    public void setFriendsCount(long friendsCount) {
+    public void setFriendsCount(Long friendsCount) {
         this.friendsCount = friendsCount;
     }
 
@@ -720,7 +797,7 @@ public class User {
      * @return
      *     The showAllInlineMedia
      */
-    public boolean isShowAllInlineMedia() {
+    public Boolean getShowAllInlineMedia() {
         return showAllInlineMedia;
     }
 
@@ -729,7 +806,7 @@ public class User {
      * @param showAllInlineMedia
      *     The show_all_inline_media
      */
-    public void setShowAllInlineMedia(boolean showAllInlineMedia) {
+    public void setShowAllInlineMedia(Boolean showAllInlineMedia) {
         this.showAllInlineMedia = showAllInlineMedia;
     }
 
@@ -749,14 +826,6 @@ public class User {
      */
     public void setScreenName(String screenName) {
         this.screenName = screenName;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

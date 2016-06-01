@@ -1,35 +1,76 @@
 
 package com.michalkarmelita.hashtagtracker.model.apimodels;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class Status {
 
+    @SerializedName("coordinates")
+    @Expose
     private Object coordinates;
-    private boolean favorited;
-    private boolean truncated;
+    @SerializedName("favorited")
+    @Expose
+    private Boolean favorited;
+    @SerializedName("truncated")
+    @Expose
+    private Boolean truncated;
+    @SerializedName("created_at")
+    @Expose
     private String createdAt;
+    @SerializedName("id_str")
+    @Expose
     private String idStr;
+    @SerializedName("entities")
+    @Expose
     private Entities entities;
+    @SerializedName("in_reply_to_user_id_str")
+    @Expose
     private Object inReplyToUserIdStr;
+    @SerializedName("contributors")
+    @Expose
     private Object contributors;
+    @SerializedName("text")
+    @Expose
     private String text;
+    @SerializedName("metadata")
+    @Expose
     private Metadata metadata;
-    private long retweetCount;
+    @SerializedName("retweet_count")
+    @Expose
+    private Long retweetCount;
+    @SerializedName("in_reply_to_status_id_str")
+    @Expose
     private Object inReplyToStatusIdStr;
-    private long id;
+    @SerializedName("id")
+    @Expose
+    private Long id;
+    @SerializedName("geo")
+    @Expose
     private Object geo;
-    private boolean retweeted;
+    @SerializedName("retweeted")
+    @Expose
+    private Boolean retweeted;
+    @SerializedName("in_reply_to_user_id")
+    @Expose
     private Object inReplyToUserId;
+    @SerializedName("place")
+    @Expose
     private Object place;
+    @SerializedName("user")
+    @Expose
     private User user;
+    @SerializedName("in_reply_to_screen_name")
+    @Expose
     private Object inReplyToScreenName;
+    @SerializedName("source")
+    @Expose
     private String source;
+    @SerializedName("in_reply_to_status_id")
+    @Expose
     private Object inReplyToStatusId;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * 
@@ -54,7 +95,7 @@ public class Status {
      * @return
      *     The favorited
      */
-    public boolean isFavorited() {
+    public Boolean getFavorited() {
         return favorited;
     }
 
@@ -63,7 +104,7 @@ public class Status {
      * @param favorited
      *     The favorited
      */
-    public void setFavorited(boolean favorited) {
+    public void setFavorited(Boolean favorited) {
         this.favorited = favorited;
     }
 
@@ -72,7 +113,7 @@ public class Status {
      * @return
      *     The truncated
      */
-    public boolean isTruncated() {
+    public Boolean getTruncated() {
         return truncated;
     }
 
@@ -81,7 +122,7 @@ public class Status {
      * @param truncated
      *     The truncated
      */
-    public void setTruncated(boolean truncated) {
+    public void setTruncated(Boolean truncated) {
         this.truncated = truncated;
     }
 
@@ -216,7 +257,7 @@ public class Status {
      * @return
      *     The retweetCount
      */
-    public long getRetweetCount() {
+    public Long getRetweetCount() {
         return retweetCount;
     }
 
@@ -225,7 +266,7 @@ public class Status {
      * @param retweetCount
      *     The retweet_count
      */
-    public void setRetweetCount(long retweetCount) {
+    public void setRetweetCount(Long retweetCount) {
         this.retweetCount = retweetCount;
     }
 
@@ -252,7 +293,7 @@ public class Status {
      * @return
      *     The id
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -261,7 +302,7 @@ public class Status {
      * @param id
      *     The id
      */
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -288,7 +329,7 @@ public class Status {
      * @return
      *     The retweeted
      */
-    public boolean isRetweeted() {
+    public Boolean getRetweeted() {
         return retweeted;
     }
 
@@ -297,7 +338,7 @@ public class Status {
      * @param retweeted
      *     The retweeted
      */
-    public void setRetweeted(boolean retweeted) {
+    public void setRetweeted(Boolean retweeted) {
         this.retweeted = retweeted;
     }
 
@@ -407,14 +448,6 @@ public class Status {
      */
     public void setInReplyToStatusId(Object inReplyToStatusId) {
         this.inReplyToStatusId = inReplyToStatusId;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

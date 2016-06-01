@@ -3,6 +3,7 @@ package com.michalkarmelita.hashtagtracker.dagger;
 import android.content.Context;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 
 import com.michalkarmelita.hashtagtracker.dagger.daggerqualifiers.ForActivity;
 
@@ -28,6 +29,11 @@ public class ActivityModule {
     @ForActivity
     public Context provideContext() {
         return activity;
+    }
+
+    @Provides
+    public LayoutInflater provideLayoutInflater(@ForActivity Context context) {
+        return LayoutInflater.from(context);
     }
 
 }
